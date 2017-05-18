@@ -1,0 +1,36 @@
+#mapid {
+  width: 650px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.carehome-detail ul {
+  list-style-type: none;
+  padding: 10px;
+  padding-left: 0;
+  border-top: 1px solid black;
+}
+
+.carehome-detail ul li {
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 1400px) {
+    #mapid {
+      width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #mapid {
+      width: 500px;
+      height: 600px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #mapid {
+      width: 280px;
+      height: 400px;
+    }
+}
