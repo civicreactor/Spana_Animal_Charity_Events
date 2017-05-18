@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <h2>International Working Animal Day</h2>
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+
+                <img class="logo" style="margin-bottom: 20px;" src="https://spana.org/wp-content/uploads/2016/08/A-donkey-pulls-a-water-cart-in-Mauritania.png">
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="col-xs-12 col-md-6">
+            <p>
+                Here is a map of all the international working animal day stories. You can enter your postcode or nearest town to read stories near you.
+                <br> Click on a pin to see details.
+            </p>
+            <map-input [mymap]="mymap"></map-input>
+            <map (onMap)="onMap($event)"></map>
+        </div>
+    </div>
+</div>

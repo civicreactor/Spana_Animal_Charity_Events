@@ -1,0 +1,79 @@
+<nav class="navbar-reactor">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <!-- Logo -->
+                <a routerLink="home" class="navbar-reactor-brand">
+                    <img src="assets/imgs/spana-logo-rev.png">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <!-- Right Navigation -->
+                <div class="navbar-reactor-right hidden-xs hidden-sm">
+
+                    <!-- Text link -->
+                    <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navbar-reactor-item navbar-reactor-link">Home</a>
+
+                    <!-- Text link -->
+                    <a routerLink="/AddEvent" routerLinkActive="active" class="navbar-reactor-item navbar-reactor-link">Add Story</a>
+
+                    <!-- Text link -->
+                    <!--<a routerLink="/news" routerLinkActive="active" class="navbar-reactor-item navbar-reactor-link">News</a>-->
+                    <!-- Text link -->
+                    <a routerLink="/suggestions" routerLinkActive="active" class="navbar-reactor-item navbar-reactor-link">Feedback</a>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <!-- Dropdown appearing on mobile only -->
+                <div class="navbar-reactor-item hidden-md hidden-lg">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle btn-success btn-sm" data-toggle="dropdown">Menu
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-right navbar-reactor-dropdown-menu">
+                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="./">Home</a></li>
+                            <li routerLinkActive="active"><a routerLink="AddEvent">AddEvent</a></li>
+                            <li routerLinkActive="active"><a routerLink="news">News</a></li>
+                            <li routerLinkActive="active"><a routerLink="suggestions">Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<section class="sample-app-content">
+    <router-outlet></router-outlet>
+    <br>
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4 text-right">
+                    </div>
+                    <div class="footer-col col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Civic Reactor
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
