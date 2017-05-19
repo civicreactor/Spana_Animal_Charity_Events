@@ -1,5 +1,5 @@
 import {NgFor} from '@angular/common';
-import { Component } from '@angular/core';import { AngularFire,AuthProviders, FirebaseListObservable } from 'angularfire2';
+import { Component } from '@angular/core';import { AngularFire, AuthProviders, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'addevent',
@@ -34,4 +34,11 @@ export class AddEventCmp {
 logout() {
   this.af.auth.logout();
 }
+ ngOnInit() {
+   
  }
+
+ fbPostData(name, postcode, message) {
+  firebase.database().ref('/users').push({name: name, postcode: postcode, message: message});
+ }
+}
