@@ -7,5 +7,6 @@ export const environment = {
   production: false,
   MARKERS: "assets/markers.json",
   NEWS: "assets/news.json",
-  POPUPS: "assets/popupData.json"
+  POPUPS: "assets/popupData.json",
+  USERS: "assets/users.json"
 };
