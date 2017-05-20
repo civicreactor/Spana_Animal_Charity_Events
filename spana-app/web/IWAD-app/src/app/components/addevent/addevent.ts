@@ -20,6 +20,7 @@ export class AddEventCmp {
       if(user) {
         // user logged in
         this.user = user;
+        console.log(user.uid)
       }
       else {
         // user not logged in
