@@ -19,6 +19,7 @@ import { NewsService } from '../../services/news';
 import { PopupService } from '../../services/popup';
 import { CarehomesService } from '../../services/carehomes';
 import { EmailService } from '../../services/email';
+import { UserService } from '../../services/users';
 
   // Initialize Firebase
   export const firebaseConfig =  {
@@ -75,7 +76,8 @@ const appRoutes: Routes = [
     CarehomesService,
     NewsService,
     PopupService,
-    EmailService
+    EmailService,
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

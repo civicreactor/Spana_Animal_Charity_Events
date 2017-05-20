@@ -1,6 +1,8 @@
 import {NgFor} from '@angular/common';
 import { Component } from '@angular/core';import { AngularFire, AuthProviders, FirebaseListObservable } from 'angularfire2';
 
+import * as firebase from 'firebase';
+
 @Component({
   selector: 'addevent',
   templateUrl: './addevent.html',
