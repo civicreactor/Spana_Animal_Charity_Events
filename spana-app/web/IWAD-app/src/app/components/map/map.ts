@@ -39,7 +39,7 @@ export class MapCmp implements AfterViewInit {
     this.onMap.emit(this.mymap);
   }
 
-  addMarker(lat: number , lng : number, id : string, color : string, markers) : void {
+  addMarker(lat: number , lng : number, color : string, markers) : void {
     //Adds a marker in input coordinates, with input color and input id.
     var size = 'l';
     //Options in case we want to change the marker size
@@ -53,7 +53,7 @@ export class MapCmp implements AfterViewInit {
                         popupAnchor: [0, -40]
                       });
     var marker = L.marker([lat, lng], {icon});
-    marker.id = id;
+    // marker.id = id;
     //On click, it will use a service to get the carehome info and set the popup
     marker.on('click', function(){
       if (!marker._popup) {
@@ -67,8 +67,6 @@ export class MapCmp implements AfterViewInit {
   addMarkers(users) : void {
     console.log('Adding markers');
 
-    console.log('data users: '+ users[0].lat);
-
     //Clustering settings
     var markers = L.markerClusterGroup({
       //disableClusteringAtZoom: 13,
@@ -81,8 +79,7 @@ export class MapCmp implements AfterViewInit {
     });
     //Add a marker for each carehome
     users.forEach(user => {
-      console.log(user.id.lat + ' ' + user.id.message)
-      this.addMarker(user.id.lat, user.id.lon, user.id, "cccc22", markers);
+      this.addMarker(user.lat, user.lon, "cc2", markers);
     });
 
     //Add the clustering to the map
@@ -97,7 +94,6 @@ export class MapCmp implements AfterViewInit {
         users => this.users = users,
         error => console.error('Error:', error),
         () => {
-          console.log('get users: '+this.users)
           this.addMarkers(this.users);
           this.mymap.invalidateSize();
         }
@@ -105,19 +101,19 @@ export class MapCmp implements AfterViewInit {
   }
 
   setPopupText(marker) {
-    //Gets a specific user, calls a styling function and then binds that text to the given marker
-    var user;
-    this.popupService.get(user.id)
+    //Gets a specific carehome, calls a styling function and then binds that text to the given marker
+    var carehome;
+    this.popupService.get(marker.id)
       .subscribe(
-        data => user = data,
+        data => carehome = data,
         error => console.error('Error:', error),
         () => {
-          marker.bindPopup(this.style(user)).openPopup();
+          marker.bindPopup(this.style(carehome)).openPopup();
         }
       );
   }
 
-  style(user) {
+  style(carehome) {
     //makes html string out of a carehome object
     // if (!carehome.grading.Overall || !carehome.grading.Caring || !carehome.grading.Effective || !carehome.grading.Responsive || !carehome.grading.Safe || !carehome.grading['Well-led']) {
     //   return `
@@ -152,8 +148,11 @@ export class MapCmp implements AfterViewInit {
 
     return `
       <div class="carehome-detail">
-        <h3><strong>${user.id.name}</strong></h3>
-        ${user.id.message}
+        <h3><strong>${carehome.name}</strong></h3>
+        ${carehome.address1+'\n'}<br />
+        ${carehome.address2}<br />
+        ${carehome.postcode}<br />
+        ${carehome.city}<br /><br />
       </div>
         `;
   }
