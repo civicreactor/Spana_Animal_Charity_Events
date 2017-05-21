@@ -57,10 +57,17 @@ export class MapCmp implements AfterViewInit {
     //mediumOptions: {iconSize: [30,70], popupAnchor: [0,-30]}
     //largeOptions: {iconSize: [36,90], popupAnchor: [0,-40]}
     var icon = L.icon({
-                        iconUrl: 'https://api.mapbox.com/v4/marker/pin-'+size+'+'+color+'.png?access_token='+this.apikey,
-                        iconRetinaUrl: 'https://api.mapbox.com/v4/marker/pin-'+size+'+'+color+'@2x.png?access_token='+this.apikey,
-                        iconSize: [36,90],
+
+                        iconUrl: '/assets/imgs/heart-icon.png',
+                        iconRetinaUrl: '/assets/imgs/heart-icon.png',
+                        iconSize: [35, 35],
                         popupAnchor: [0, -40]
+
+
+                        // iconUrl: 'https://api.mapbox.com/v4/marker/pin-'+size+'-heart+'+color+'.png?access_token='+this.apikey,
+                        // iconRetinaUrl: 'https://api.mapbox.com/v4/marker/pin-'+size+'-heart+'+color+'@2x.png?access_token='+this.apikey,
+                        // iconSize: [36,90],
+                        // popupAnchor: [0, -40]
                       });
     var marker = L.marker([lat, lng], {icon});
     //On click, it will use a service to get the user info and set the popup
@@ -90,7 +97,7 @@ export class MapCmp implements AfterViewInit {
       this.postCodeService.get(user.postcode)
         .subscribe(
           data => {
-            this.addMarker(data.lat, data.lng, user, "cc2", markers);
+            this.addMarker(data.lat, data.lng, user, "f00", markers);
           },
           error => console.error('Error:', error),
         )
