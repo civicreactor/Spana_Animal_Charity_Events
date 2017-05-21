@@ -60,7 +60,7 @@ export class MapCmp implements AfterViewInit {
 
                         iconUrl: '/assets/imgs/heart-icon.png',
                         iconRetinaUrl: '/assets/imgs/heart-icon.png',
-                        iconSize: [35, 35],
+                        iconSize: [25, 25],
                         popupAnchor: [0, -40]
 
 
