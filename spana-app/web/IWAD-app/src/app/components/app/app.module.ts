@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import {ShareButtonsModule} from 'ngx-sharebuttons';
+import {ShareModule} from 'ng2share/share.module'
 
 import { API_FIREBASE_KEY } from './mock-api';
 import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
@@ -70,7 +70,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    ShareButtonsModule.forRoot(),
+    ShareModule,
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [
