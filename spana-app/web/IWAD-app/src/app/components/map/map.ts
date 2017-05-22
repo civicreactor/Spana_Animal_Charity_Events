@@ -118,6 +118,8 @@ export class MapCmp implements AfterViewInit {
       <div class="user-detail">
         <h3><strong>${user.name}</strong></h3>
           ${user.message+'\n'}<br />
+          <share-button button="facebook"></share-button>
+          <button shareButton="facebook" [sbUrl]="'https://spana.org'"><i class="fa fa-facebook"></i></button>
       </div>
         `;
   }
