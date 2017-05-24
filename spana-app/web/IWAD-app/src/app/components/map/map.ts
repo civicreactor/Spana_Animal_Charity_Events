@@ -60,7 +60,7 @@ export class MapCmp implements AfterViewInit {
 
                         iconUrl: '/assets/imgs/heart-icon.png',
                         iconRetinaUrl: '/assets/imgs/heart-icon.png',
-                        iconSize: [25, 25],
+                        iconSize: [20, 20],
                         popupAnchor: [0, -40]
 
 
@@ -118,8 +118,7 @@ export class MapCmp implements AfterViewInit {
       <div class="user-detail">
         <h3><strong>${user.name}</strong></h3>
           ${user.message+'\n'}<br/>
- <div class="fb-share-button" data-href="https://spana.org/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fspana.org%2F&amp;src=sdkpreparse">Share</a></div>
-      </div>
+ <div  style="margin-top: 20px"class="fb-share-button" data-href="https://spana.org/?page_id=5065&amp;preview=true" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fspana.org%2F%3Fpage_id%3D5065%26preview%3Dtrue&amp;src=sdkpreparse"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i> <strong>Spread the word!<strong></a></div>
         `;
   }
 }
