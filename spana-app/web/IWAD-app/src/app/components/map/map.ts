@@ -49,7 +49,7 @@ export class MapCmp implements AfterViewInit {
     this.onMap.emit(this.mymap);
   }
 
-  addMarker(lat: number , lng : number, user: Object, color : string, markers) : void {
+  addMarker(user, color : string, markers) : void {
     //Adds a marker in input coordinates, with input color and input id.
     var size = 'l';
     //Options in case we want to change the marker size
@@ -69,7 +69,7 @@ export class MapCmp implements AfterViewInit {
                         // iconSize: [36,90],
                         // popupAnchor: [0, -40]
                       });
-    var marker = L.marker([lat, lng], {icon});
+    var marker = L.marker([user.coordinates.lat, user.coordinates.lng], {icon});
     //On click, it will use a service to get the user info and set the popup
     marker.on('click', function(){
       if (!marker._popup) {
@@ -94,13 +94,8 @@ export class MapCmp implements AfterViewInit {
     });
     //Add a marker for each user
     users.forEach(user => {
-      this.postCodeService.get(user.postcode)
-        .subscribe(
-          data => {
-            this.addMarker(data.lat, data.lng, user, "f00", markers);
-          },
-          error => console.error('Error:', error),
-        )
+            this.addMarker(user, "f00", markers);
+
     });
 
     //Add the clustering to the map
