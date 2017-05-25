@@ -52,7 +52,7 @@ export class AddEventCmp implements OnInit {
         console.log()
         firebase.database().ref('/users').push({ name, coordinates, message })
         .then(function(res){
-          console.log(res)
+          console.log(res.uid)
           this.router.navigateByUrl("/?id="+res.id);
         });
         // this.router.navigateByUrl("/?hello=true");
