@@ -50,11 +50,9 @@ export class AddEventCmp implements OnInit {
     this.postcodeService.get(postcode).subscribe(
       coordinates => {
         console.log()
-        firebase.database().ref('/users').push({ name, coordinates, message })
-        .then(function(res){
-          // this.router.navigateByUrl("/?id="+res.id);
-        });
-        this.router.navigateByUrl("/?hello=true"); 
+        var newPostKey = firebase.database().ref('/users').push({ name, coordinates, message }).key;
+
+        this.router.navigateByUrl("/?postId=" + newPostKey); 
       }
     )
   }

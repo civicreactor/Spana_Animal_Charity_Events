@@ -3,7 +3,7 @@ import {UserService} from '../../services/users';
 import {PopupService} from '../../services/popup';
 import {PostcodeService} from '../../services/postcode';
 import { AngularFireDatabase } from 'angularfire2/database';
-
+import {Router, ActivatedRoute, Params} from '@angular/router';
 
 declare let L: any;
 @Component({
@@ -16,13 +16,15 @@ declare let L: any;
 export class MapCmp implements AfterViewInit {
   users: any;
   constructor(public db: AngularFireDatabase, public userService: UserService, 
-              public popupService: PopupService, public postCodeService: PostcodeService) {
+              public popupService: PopupService, public postCodeService: PostcodeService, private activatedRoute: ActivatedRoute) {
                 this.users = db.list('/users', {preserveSnapshot: true});
               }
   mymap: any;
+  postId;
   apikey = 'pk.eyJ1IjoianVhbmNhcmxvc2hnIiwiYSI6ImNpdnIzN2R4dzAwMTEyeW1ubTI2aXJ1bG0ifQ.nY1oVZ6HN3Vg4sSwbOy2Vw';
   //Emitter used to send the map to the parent component
   @Output() onMap = new EventEmitter<any>();
+  onMarkersLoad = [];
 
   //Map loads after the view
   ngAfterViewInit() {
@@ -30,10 +32,15 @@ export class MapCmp implements AfterViewInit {
     let usersArr = [];
     this.users.subscribe(snapshots => {
       snapshots.forEach(snapshot => {
-        usersArr.push(snapshot.val());
+        let user = snapshot.val();
+        user.key = snapshot.key;
+        usersArr.push(user);
       });
       this.addMarkers(usersArr);
-    }); 
+    });
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+        this.postId = params['postId'];
+    });
   }
 
   initMap() : void {
@@ -76,6 +83,10 @@ export class MapCmp implements AfterViewInit {
         this.setPopupText(marker, user);
       }
     }.bind(this));
+    if (this.postId && this.postId == user.key) {
+        this.mymap.setView([user.coordinates.lat, user.coordinates.lng], 14);
+        this.onMarkersLoad.push(function(){marker.fire("click")});
+    }
     //Add marker to the clustering layer
     markers.addLayer(marker);
   }
@@ -95,12 +106,12 @@ export class MapCmp implements AfterViewInit {
     //Add a marker for each user
     users.forEach(user => {
             this.addMarker(user, "f00", markers);
-
     });
 
     //Add the clustering to the map
     this.mymap.addLayer(markers);
     console.log('Finished adding markers');
+    this.onMarkersLoad.forEach(fn => fn());
   }
 
   setPopupText(marker, user) {
