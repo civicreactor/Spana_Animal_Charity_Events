@@ -100,7 +100,7 @@ export class MapCmp implements AfterViewInit {
       //spiderfyOnMaxZoom: true,
       chunkedLoading: true,
       maxClusterRadius: function (zoom) {
-        return (zoom < 13) ? 100 : 1; // radius in pixels
+        // return (zoom < 13) ? 100 : 1; // radius in pixels
       }
     });
     //Add a marker for each user
