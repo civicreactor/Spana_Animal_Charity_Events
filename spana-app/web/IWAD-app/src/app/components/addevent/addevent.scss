@@ -21,6 +21,9 @@ p {
 .small-img {
   width: 300px;
   height: 300px;
-  margin-bottom: 250px;
-  margin-top: 65px
+  margin-bottom: 65px;
+  margin-top: 65px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px black;
 }
