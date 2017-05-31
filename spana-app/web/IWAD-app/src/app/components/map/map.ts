@@ -96,11 +96,11 @@ export class MapCmp implements AfterViewInit {
 
     //Clustering settings
     var markers = L.markerClusterGroup({
-      //disableClusteringAtZoom: 13,
-      //spiderfyOnMaxZoom: true,
+      // disableClusteringAtZoom: 13,
+      // spiderfyOnMaxZoom: true,
       chunkedLoading: true,
       maxClusterRadius: function (zoom) {
-        // return (zoom < 13) ? 100 : 1; // radius in pixels
+        return (zoom < 13) ? 100 : 1; // radius in pixels
       }
     });
     //Add a marker for each user

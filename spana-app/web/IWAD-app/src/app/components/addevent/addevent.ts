@@ -49,7 +49,14 @@ export class AddEventCmp implements OnInit {
   fbPostData(name, postcode, message) {
     this.postcodeService.get(postcode).subscribe(
       coordinates => {
-        console.log()
+        // coordinates.lat 0.003 on random
+        coordinates.lat -= 0.0015;
+        coordinates.lng -= 0.0015;
+        coordinates.lat += getRandom();
+        coordinates.lng += getRandom();
+        function getRandom() {
+          return Math.random()*0.003
+        }
         var newPostKey = firebase.database().ref('/users').push({ name, coordinates, message }).key;
 
         this.router.navigateByUrl("/?postId=" + newPostKey); 
