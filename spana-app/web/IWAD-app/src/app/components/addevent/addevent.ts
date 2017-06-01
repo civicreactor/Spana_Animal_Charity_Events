@@ -59,7 +59,8 @@ export class AddEventCmp implements OnInit {
         }
         var newPostKey = firebase.database().ref('/users').push({ name, coordinates, message }).key;
 
-        this.router.navigateByUrl("/?postId=" + newPostKey); 
+        // this.router.navigateByUrl("/?postId=" + newPostKey); 
+       this.router.navigateByUrl("/news");
       }
     )
   }

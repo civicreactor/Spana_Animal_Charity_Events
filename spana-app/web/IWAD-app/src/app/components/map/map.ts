@@ -45,7 +45,7 @@ export class MapCmp implements AfterViewInit {
 
   initMap() : void {
     //Add map to the div
-    this.mymap = L.map('mapid').setView([54, -2], 6);
+    this.mymap = L.map('mapid').setView([51, -2], 6);
     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token='+this.apikey, {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/'+
     'licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
