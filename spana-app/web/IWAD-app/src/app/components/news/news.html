@@ -1,36 +1,11 @@
-<div class="container" style="clear:both">
-  <div class="row menu">
+<div class="container">
+  <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-      <ul>
-        <li><button [class.active] = "isActive('all')" (click)="clicked('all')">All</button></li>
-        <li><button [class.active] = "isActive('audio')" (click)="clicked('audio')"><i class="fa fa-file-audio-o fa-2x" aria-hidden="true"></i></button></li>
-        <li><button [class.active] = "isActive('video')" (click)="clicked('video')"><i class="fa fa-file-video-o fa-2x" aria-hidden="true"></i></button></li>
-        <li><button [class.active] = "isActive('text')" (click)="clicked('text')"><i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i></button></li>
-        <li><button [class.active] = "isActive('blog')" (click)="clicked('blog')"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></button></li>
-      </ul>
+      <p>Thank you for adding your story would you now like to show your care by sharing on Facebook or Twitter?
+        <p>
     </div>
-  </div>
-  <div *ngIf="news">
-    <div *ngFor="let new of news" class="row article" id="news-list">
-      <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-        <ul class="{{new.type}}">
-          <li *ngIf="new.type !== 'blog'"><i class="{{'fa fa-file-' + new.type + '-o fa-2x'}}" aria-hidden="true"></i></li>
-          <li *ngIf="new.type === 'blog'"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></li>
-          <li><h3><a href="{{new.link}}" target="_blank">{{new.title}}</a></h3></li>
-          <li><p>{{new.content}}</p></li>
-          <hr>
-        </ul>
-        <div *ngIf="news.length === 1" class="fill">
-      </div>
-    </div>
-  </div>
-  <div *ngIf="!news || news == ''">
-    <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" id="news-alert">
-      <ul>
-        <li><i class="fa fa-info-circle fa-4x" aria-hidden="true"></i></li>
-        <li><h4><p>There are not any news for this type of media at the moment, please come back later. 
-          If you have anything to add go to our <a href="/suggestions">suggestions</a> section.</p></h4></li>
-      </ul>
+    <div>
+      <img class="pledge" src="../assets/imgs/pledge.jpg" alt="">
     </div>
   </div>
 </div>
