@@ -89,15 +89,15 @@ a.active {
     padding: 0 20px;
     border-radius: 20em;
     line-height: 40px;
-    background-color: #D23333;
+    background-color: #C00A44;
     color: white;
     font-size: 14px;
-    border: 2px solid #D23333;
+    border: 2px solid #C00A44;
 }
 
 .navbar-reactor-button:hover {
     color: white;
-    background: #D23333;
+    background: #C00A44;
     border-color: #ac2626;
 }
 
@@ -108,7 +108,7 @@ a.active {
     margin-top: 15px;
     box-shadow: 1px 1px 4px $white;
     border-color: $white;
-    background-color: #dff0d8;
+    background-color: #CAD028;
 }
 
 .navbar-reactor-dropdown-menu li>a {
@@ -123,7 +123,7 @@ a.active {
 .navbar-reactor-dropdown-menu li>a:hover,
 .dropdown-menu>.active>a {
     background: transparent !important;
-    color: $blue !important;
+    color: #C00A44 !important;
 }
 
 .navbar-reactor-dropdown-menu:before {
@@ -141,14 +141,14 @@ a.active {
 
 .dropdown-toggle.btn-success {
     color: $black;
-    background-color: $green-light;
-    border-color: #255625;
+    background-color: #CAD028;
+    border-color: #CAD028;
     float: right;
     margin-top: 21px;
 }
 
 .dropdown-toggle.btn-success:hover {
     color: $black;
-    background-color: $orange;
-    border-color: #255625;
+    background-color: #C00A44;
+    border-color: #C00A44;
 }
