@@ -13,8 +13,9 @@ a {
   margin: 40px auto;
 }
 
-h3 {
+h2 {
   text-align: center;
+  color: #c00a44;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -22,12 +23,17 @@ h3 {
 p {
   text-align: justify;
   font-size: 1.15em;
+  margin-bottom: 30px;
 }
 
 img {
   margin-bottom: 30px;
   width: 92%;
   float: right;
+}
+
+h3 {
+  margin-top: 30px;
 }
 
 
@@ -50,4 +56,14 @@ img {
     .logo {
       width: 280px;
     }
+}
+
+.donkey {
+  width: 450px;
+  height: 350px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px black;
 }
