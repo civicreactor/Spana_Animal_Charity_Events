@@ -9,19 +9,19 @@
             <form *ngIf="loggedIn">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Name</label>
-                        <input type="text" [(ngModel)]="name" class="form-control" name="name" placeholder="Your full name" id="name">
+                        <label>Name/Organisation/Group</label>
+                        <input type="text" [(ngModel)]="name" class="form-control" name="name" placeholder="Name/Organisation/Group" id="name">
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Location town/postcode</label>
+                        <label>Postcode</label>
                         <input type="postcode" [(ngModel)]="postcode" class="form-control" name="_replyto" placeholder="Location" id="location">
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Write your story here</label>
+                        <label>Message</label>
                         <textarea name="message" [(ngModel)]="message" class="form-control" placeholder="Your message" id="message"></textarea>
                     </div>
                 </div>
