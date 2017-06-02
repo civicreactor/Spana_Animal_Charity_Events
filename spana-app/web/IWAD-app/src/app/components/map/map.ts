@@ -124,7 +124,6 @@ export class MapCmp implements AfterViewInit {
       <div class="user-detail">
         <h3><strong>${user.name}</strong></h3>
           ${user.message+'\n'}
- <div style="margin-top: 20px" class="fb-share-button" data-href="https://spana.org/spana-pledge" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fspana.org%2Fspana-pledge&amp;src=sdkpreparse"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i> <strong>Spread the word!<strong></a></a></div>
         `;
   }
 }
