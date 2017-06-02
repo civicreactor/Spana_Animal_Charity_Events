@@ -5,7 +5,7 @@
             <p>To help celebrate International Working Animal Day, please leave our teams a message of support and spread the
                 word about <a href="https://spana.org" target="_blank" >SPANA’s</a> work helping working animals and the communities that rely on them. <br><br> If, like
                 us, you believe that every working animal deserves to be treated with compassion, please <a href="AddEvent">leave us a short
-                message</a> and help to populate the map with kindness.<br><br> You can tell us why you <a href="suggestions">support</a> our work, leave
+                message</a> and help to populate the <a href="#mapid">map</a> with kindness.<br><br> You can tell us why you <a href="suggestions">support</a> our work, leave
                 our teams some words of encouragement, or just let us know if you’re also passionate about working animal
                 welfare.
                 <br><br> By sharing this page with your friends on Facebook, you can help to spread the word about our work
@@ -31,6 +31,11 @@
                 <map-input [mymap]="mymap"></map-input>
                 <map (onMap)="onMap($event)"></map>
             </div>
+        </div>
+    </div>
+    <div  style="margin-top: 80px"class="row text-center">
+        <div class="col-xs-12 col-md-12">
+            <a href="AddEvent" class="button red donate">Leave a Message of Support</a>
         </div>
     </div>
 </div>
