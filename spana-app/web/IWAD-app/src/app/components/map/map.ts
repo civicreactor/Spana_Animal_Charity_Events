@@ -73,6 +73,7 @@ export class MapCmp implements AfterViewInit {
 
     // On click, it will use a service to get the user info and set the popup
     marker.on('click', function(){
+      this.mymap.setView([user.coordinates.lat, user.coordinates.lng], 14);
       if (!marker._popup) {
         this.setPopupText(marker, user);
       }
