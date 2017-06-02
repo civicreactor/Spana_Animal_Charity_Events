@@ -56,7 +56,7 @@ export class MapCmp implements AfterViewInit {
     this.onMap.emit(this.mymap);
   }
 
-  addMarker(user, color : string, markers) : void {
+  addMarker(user, color : string) : void {
     //Adds a marker in input coordinates, with input color and input id.
     var size = 'l';
     //Options in case we want to change the marker size
@@ -64,52 +64,32 @@ export class MapCmp implements AfterViewInit {
     //mediumOptions: {iconSize: [30,70], popupAnchor: [0,-30]}
     //largeOptions: {iconSize: [36,90], popupAnchor: [0,-40]}
     var icon = L.icon({
-
                         iconUrl: '/assets/imgs/heart-icon.png',
                         iconRetinaUrl: '/assets/imgs/heart-icon.png',
                         iconSize: [20, 20],
                         popupAnchor: [0, -40]
-
-
-                        // iconUrl: 'https://api.mapbox.com/v4/marker/pin-'+size+'-heart+'+color+'.png?access_token='+this.apikey,
-                        // iconRetinaUrl: 'https://api.mapbox.com/v4/marker/pin-'+size+'-heart+'+color+'@2x.png?access_token='+this.apikey,
-                        // iconSize: [36,90],
-                        // popupAnchor: [0, -40]
                       });
     var marker = L.marker([user.coordinates.lat, user.coordinates.lng], {icon});
-    //On click, it will use a service to get the user info and set the popup
+
+    // On click, it will use a service to get the user info and set the popup
     marker.on('click', function(){
       if (!marker._popup) {
         this.setPopupText(marker, user);
       }
     }.bind(this));
+    marker.addTo(this.mymap);
     if (this.postId && this.postId == user.key) {
         this.mymap.setView([user.coordinates.lat, user.coordinates.lng], 14);
         this.onMarkersLoad.push(function(){marker.fire("click")});
     }
-    //Add marker to the clustering layer
-    markers.addLayer(marker);
   }
 
   addMarkers(users) : void {
     console.log('Adding markers');
-
-    //Clustering settings
-    var markers = L.markerClusterGroup({
-      // disableClusteringAtZoom: 13,
-      // spiderfyOnMaxZoom: true,
-      chunkedLoading: true,
-      maxClusterRadius: function (zoom) {
-        return (zoom < 13) ? 100 : 1; // radius in pixels
-      }
-    });
     //Add a marker for each user
     users.forEach(user => {
-            this.addMarker(user, "f00", markers);
+            this.addMarker(user, "f00");
     });
-
-    //Add the clustering to the map
-    this.mymap.addLayer(markers);
     console.log('Finished adding markers');
     this.onMarkersLoad.forEach(fn => fn());
   }
