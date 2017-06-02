@@ -10,25 +10,25 @@
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Name/Organisation/Group</label>
-                        <input type="text" [(ngModel)]="name" class="form-control" name="name" placeholder="Name/Organisation/Group" id="name">
+                        <input type="text" [(ngModel)]="name" class="form-control" name="name" placeholder="Name/Organisation/Group" id="name" required data-validation-required-message="Please enter a message.">
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Postcode</label>
-                        <input type="postcode" [(ngModel)]="postcode" class="form-control" name="_replyto" placeholder="Location" id="location">
+                        <input type="postcode" [(ngModel)]="postcode" class="form-control" name="_replyto" placeholder="Location" id="location" required data-validation-required-message="Please enter a message.">
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Message</label>
-                        <textarea name="message" [(ngModel)]="message" class="form-control" placeholder="Your message" id="message"></textarea>
+                        <textarea name="message" [(ngModel)]="message" class="form-control" placeholder="Your message" id="message" required data-validation-required-message="Please enter a message."></textarea>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="form-group col-xs-12">
-                        <button (click)="fbPostData(name, postcode, message)" class="btn btn-primary btn-lg">Post</button>
+                        <button id="button" (click)="fbPostData(name, postcode, message)" class="btn btn-primary btn-lg">Post</button>
                     </div>
                 </div>
             </form>
