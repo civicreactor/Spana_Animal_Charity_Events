@@ -1,27 +1,3 @@
-.marker-cluster-small, .marker-cluster-small div, .marker-cluster-medium, .marker-cluster-medium div,
-.marker-cluster-large, .marker-cluster-large div {
-	background-color: transparent !important;
-	}
-// .marker-cluster-small div {
-//   background-color: transparent !important;
-//   // background-image: '/assets/imgs/heart-icon.png' !important;
-// 	}
-
-// .marker-cluster-medium {
-//   background-color: transparent !important;
-// 	}
-// .marker-cluster-medium div {
-// 	background-color: transparent !important;
-// 	}
-
-// .marker-cluster-large {
-// background-color: transparent !important;
-// 	}
-// .marker-cluster-large div {
-// background-color: transparent !important;
-// 	}
-
-
 #mapid {
   width: 650px;
   height: 800px;
@@ -39,7 +15,19 @@
   padding-right: 20px;
 }
 
-@media only screen and (max-width: 1400px) {
+.marker-cluster-small, .marker-cluster-small div, .marker-cluster-medium, .marker-cluster-medium div,
+.marker-cluster-large, .marker-cluster-large div {
+	background-color: transparent;
+}
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small, .leaflet-oldie .marker-cluster-small div, 
+.leaflet-oldie .marker-cluster-medium, .leaflet-oldie .marker-cluster-medium div, 
+.leaflet-oldie .marker-cluster-large, .leaflet-oldie .marker-cluster-large div {
+	background-color: transparent;
+}
+
+@media only screen and (min-width: 769px) {
     #mapid {
       width: 100%;
     }
@@ -49,6 +37,9 @@
     #mapid {
       width: 500px;
       height: 600px;
+    }
+    img {
+      text-align: center;
     }
 }
 

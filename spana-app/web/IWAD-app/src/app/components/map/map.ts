@@ -87,36 +87,9 @@ export class MapCmp implements AfterViewInit {
 
   addMarkers(users) : void {
     console.log('Adding markers');
-    //Clustering settings
-    // var markers = L.markerClusterGroup({
-    //   // disableClusteringAtZoom: 13,
-    //   // spiderfyOnMaxZoom: true,
-    //   chunkedLoading: true,
-    //   maxClusterRadius: function (zoom) {
-    //     return (zoom < 13) ? 100 : 1; // radius in pixels
-    //   }
-    // });
-
-
-    // var childCount = cluster.getChildCount();
-
-		// var c = ' marker-cluster-';
-		// if (childCount < 10) {
-		// 	c += 'small';
-		// } else if (childCount < 100) {
-		// 	c += 'medium';
-		// } else {
-		// 	c += 'large';
-		// }
-
-		// return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
-	
     var markers = L.markerClusterGroup({
-      
-      
       iconCreateFunction: function(cluster) {
         var childCount = cluster.getChildCount();
-
         var c = ' marker-cluster-';
         if (childCount < 10) {
           c += 'small';
@@ -126,7 +99,7 @@ export class MapCmp implements AfterViewInit {
           c += 'large';
         }
         return new L.DivIcon({ html: '<div><img src="/assets/imgs/heart-icon.png" width="100%"></div>', 
-                                className: 'marker-cluster' + c });
+                                className: 'marker-cluster' + c});
       },
       chunkedLoading: true,
       maxClusterRadius: function (zoom) {
