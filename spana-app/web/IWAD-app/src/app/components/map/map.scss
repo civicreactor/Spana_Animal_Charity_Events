@@ -1,3 +1,27 @@
+.marker-cluster-small, .marker-cluster-small div, .marker-cluster-medium, .marker-cluster-medium div,
+.marker-cluster-large, .marker-cluster-large div {
+	background-color: transparent !important;
+	}
+// .marker-cluster-small div {
+//   background-color: transparent !important;
+//   // background-image: '/assets/imgs/heart-icon.png' !important;
+// 	}
+
+// .marker-cluster-medium {
+//   background-color: transparent !important;
+// 	}
+// .marker-cluster-medium div {
+// 	background-color: transparent !important;
+// 	}
+
+// .marker-cluster-large {
+// background-color: transparent !important;
+// 	}
+// .marker-cluster-large div {
+// background-color: transparent !important;
+// 	}
+
+
 #mapid {
   width: 650px;
   height: 800px;
