@@ -56,7 +56,7 @@ export class MapCmp implements AfterViewInit {
     this.onMap.emit(this.mymap);
   }
 
-  addMarker(user, color : string) : void {
+  addMarker(user, color : string, markers) : void {
     //Adds a marker in input coordinates, with input color and input id.
     var size = 'l';
     //Options in case we want to change the marker size
@@ -73,24 +73,46 @@ export class MapCmp implements AfterViewInit {
 
     // On click, it will use a service to get the user info and set the popup
     marker.on('click', function(){
-      this.mymap.setView([user.coordinates.lat, user.coordinates.lng], 14);
       if (!marker._popup) {
         this.setPopupText(marker, user);
       }
     }.bind(this));
-    marker.addTo(this.mymap);
     if (this.postId && this.postId == user.key) {
         this.mymap.setView([user.coordinates.lat, user.coordinates.lng], 14);
         this.onMarkersLoad.push(function(){marker.fire("click")});
     }
+    //Add marker to the clustering layer
+    markers.addLayer(marker);
   }
 
   addMarkers(users) : void {
     console.log('Adding markers');
+    var markers = L.markerClusterGroup({
+      iconCreateFunction: function(cluster) {
+        var childCount = cluster.getChildCount();
+        var c = ' marker-cluster-';
+        if (childCount < 10) {
+          c += 'small';
+        } else if (childCount < 100) {
+          c += 'medium';
+        } else {
+          c += 'large';
+        }
+        return new L.DivIcon({ html: '<div><img src="/assets/imgs/heart-icon.png" width="100%"></div>', 
+                                className: 'marker-cluster' + c});
+      },
+      chunkedLoading: true,
+      maxClusterRadius: function (zoom) {
+        return (zoom < 13) ? 100 : 1; // radius in pixels
+      }
+    });
+
     //Add a marker for each user
     users.forEach(user => {
-            this.addMarker(user, "f00");
+            this.addMarker(user, "f00", markers);
     });
+    //Add the clustering to the map
+    this.mymap.addLayer(markers);
     console.log('Finished adding markers');
     this.onMarkersLoad.forEach(fn => fn());
   }
