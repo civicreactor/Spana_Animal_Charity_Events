@@ -47,7 +47,7 @@ const appRoutes: Routes = [
   { 
     path: '', component: HomeCmp},
   {
-    path: 'addevent',
+    path: 'add-event',
     component: AddEventCmp
   },
   { path: 'news', component: NewsCmp},
