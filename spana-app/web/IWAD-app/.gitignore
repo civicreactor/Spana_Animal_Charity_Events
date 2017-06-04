@@ -27,6 +27,7 @@ src/app/mock-api.ts
 npm-debug.log
 testem.log
 /typings
+/express/public
 
 # e2e
 /e2e/*.js
