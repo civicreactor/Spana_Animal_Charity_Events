@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { API_FIREBASE_KEY } from './mock-api';
 import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 import { AppComponent } from './app.component';
-import { AddEventCmp } from '../addevent/addevent';
+import { AddEventCmp } from '../addevent/add-event';
 import { HomeCmp } from '../home/home';
 import { MapCmp } from '../map/map';
 import { MapInputCmp } from '../map-input/map-input';
