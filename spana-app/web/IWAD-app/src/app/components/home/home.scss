@@ -16,15 +16,15 @@ a {
 
 h2 {
   text-align: center;
-  color: #c00a44;
-  margin-bottom: 20px;
+  color: white;
+  margin-bottom: 15px;
   margin-top: 15px;
   text-transform: uppercase;
 }
 
 p {
   text-align: justify;
-  font-size: 1em;
+  font-size: 20px;
   margin-top: 30px;
 }
 
@@ -52,7 +52,7 @@ h3 {
   border: 1px solid transparent;
   padding: 0.85em 1em;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .donkey {
@@ -62,7 +62,7 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: 5px;
+  margin-top: 20px;
   border-radius: 6px;
   text-decoration: none;
   box-shadow: 2px 2px 3px black;
@@ -85,6 +85,21 @@ h3 {
       width: 450px;
       height: 350px;
     }
+}
+
+.banner {
+  background-color: #c00a44;
+  position: relative;
+  text-align: center;
+  // height: calc(30vh - 40px);
+  color: white;
+  height: calc(70% - 3em);
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */ 
+  background-size: cover !important;
+  // display: flex;
+  align-items: center;
+  // justify-content: center;
+  margin-bottom: 20px;
 }
 
 
