@@ -1,20 +1,21 @@
+<div class="banner">
+    <div class="row">
+        <h2>Show your support for SPANA</h2>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <map-input [mymap]="mymap"></map-input>
+            <map (onMap)="onMap($event)"></map>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
-
-        <div class="banner">
-            <div class="row">
-                <h2>Show your support for SPANA</h2>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-xs-12">
-                    <map-input [mymap]="mymap"></map-input>
-                    <map (onMap)="onMap($event)"></map>
-                </div>
-            </div>
-        </div>
         <div style="margin-top: 30px" class="row text-center">
             <div class="col-xs-12 col-md-12">
                 <a href="add-event" class="button red donate">Leave a Message of Support</a>
