@@ -17,24 +17,25 @@ a {
 h2 {
   text-align: center;
   color: #c00a44;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 15px;
   text-transform: uppercase;
 }
 
 p {
   text-align: justify;
-  font-size: 1.15em;
-  margin-bottom: 30px;
+  font-size: 1em;
+  margin-top: 30px;
 }
 
 img {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 92%;
   float: right;
 }
 
 h3 {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 16px;
 }
 
@@ -51,10 +52,15 @@ h3 {
   border: 1px solid transparent;
   padding: 0.85em 1em;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .donkey {
+  text-align: center;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   margin-top: 5px;
   border-radius: 6px;
@@ -80,3 +86,5 @@ h3 {
       height: 350px;
     }
 }
+
+
