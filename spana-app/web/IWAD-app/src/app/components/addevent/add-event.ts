@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, FirebaseListObservable } from 'angularfire2';
 import { Router } from "@angular/router";
 import { PostcodeService } from "../../services/postcode";
+import { MessageService } from "../../services/message";
 
 import * as firebase from 'firebase';
 
@@ -17,7 +18,8 @@ export class AddEventCmp implements OnInit {
   user = {};
   loggedIn;
   users: FirebaseListObservable<any[]>;
-  constructor(private af: AngularFire, private router: Router, private postcodeService: PostcodeService) { }
+  constructor(private af: AngularFire, private router: Router, private postcodeService: PostcodeService, 
+                  private msg: MessageService) { }
 
   ngOnInit() {
     this.af.auth.subscribe(user => {
@@ -57,10 +59,9 @@ export class AddEventCmp implements OnInit {
         function getRandom() {
           return Math.random()*0.003
         }
-        var newPostKey = firebase.database().ref('/users').push({ name, coordinates, message }).key;
-
-        // this.router.navigateByUrl("/?postId=" + newPostKey); 
-       this.router.navigateByUrl("/news");
+        
+        this.msg.post(name, coordinates, message);
+        this.router.navigateByUrl("/news");
       }
     )
   }

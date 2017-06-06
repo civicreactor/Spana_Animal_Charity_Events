@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {NewsService} from '../../services/news';
+import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { MessageService } from "../../services/message";
+
 
 @Component({
   selector: 'news',
@@ -7,37 +9,17 @@ import {NewsService} from '../../services/news';
   styleUrls: ['./news.scss']
 })
 
-export class NewsCmp implements OnInit {
-  constructor(public newsService: NewsService) {}
-  news;
-  allNews;
-  activeButton = 'all';
 
-  ngOnInit() {
-    this.getNews();  
+
+export class NewsCmp {
+  constructor(public msg: MessageService, public router: Router) {}
+
+  fbMessage() {
+    var newPostKey = this.msg.postKey;
+    this.router.navigateByUrl("/?postId=" + newPostKey);
   }
-  getNews() {
-    this.newsService.get()
-      .subscribe(
-        news => this.allNews = news,
-        error => console.error('Error: ', error),
-        () => this.news = this.allNews
-      );
-  }
-  getFilteredNews(type) {
-    if (type === "all") this.news = this.allNews;
-    else {
-      this.news = this.allNews.filter(function (n) {
-        return n.type == type;
-      })
-    }
-  }
-  clicked(type) {
-    this.getFilteredNews(type);
-    this.activeButton = type;
-  }
-  isActive(type) {
-    return this.activeButton === type;
-  }   
+
+
+  
 }
 

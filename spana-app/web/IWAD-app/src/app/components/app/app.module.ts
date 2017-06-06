@@ -20,6 +20,7 @@ import { PopupService } from '../../services/popup';
 import { CarehomesService } from '../../services/carehomes';
 import { EmailService } from '../../services/email';
 import { UserService } from '../../services/users';
+import { MessageService } from "../../services/message";
 
   // Initialize Firebase
   export const firebaseConfig =  {
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [
+    MessageService,
     PostcodeService,
     CarehomesService,
     NewsService,
