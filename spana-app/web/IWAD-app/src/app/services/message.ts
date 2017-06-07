@@ -8,10 +8,13 @@ import * as firebase from 'firebase';
 @Injectable()
 export class MessageService {
   postKey: any;
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+   }
 
   post(name, coordinates, message) {
     this.postKey = firebase.database().ref('/users').push({ name, coordinates, message }).key;
     return this.postKey;
   }
+  
 }
+
