@@ -26,6 +26,21 @@ p {
 }
 
 .face-btn {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
+}
+
+.button {
+  background: #c00a44;
+  font-weight: 800;
+  font-size: 1.15em;
+  border: 1px solid transparent;
+  padding: 0.85em 1em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.donate {
+  color: #fff;
+  text-transform: uppercase;
 }
