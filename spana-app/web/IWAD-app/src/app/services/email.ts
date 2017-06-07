@@ -9,7 +9,7 @@ export class EmailService {
 
     send(data) {
         console.log('Sending email');
-        return this.http.post("https://formspree.io/comms@spana.org", data)
+        return this.http.post("https://formspree.io/deanfoulds@gmail.com", data)
             .map(response => response.json());
     }
 }

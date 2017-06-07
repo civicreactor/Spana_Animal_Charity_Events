@@ -21,15 +21,13 @@ export class SuggestionsCmp {
     this.sendingEmail = true;
     this.emailService.send(this.feedbackForm)
       .subscribe(
-      data => console.log('response:', data),
-      error => {
-        this.errorMessage = "Error sending the email";
-        this.sendingEmail = false;
-      },
-      () => {
+      data => {
+        console.log('response:', data)
         this.successMessage = "Email sent!"
         this.sendingEmail = false;
-      }
-      );
+      }, error => {
+        this.errorMessage = "Error sending the email";
+        this.sendingEmail = false;
+      })
   }
 }
