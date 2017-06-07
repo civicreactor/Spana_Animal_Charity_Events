@@ -59,8 +59,7 @@ export class AddEventCmp implements OnInit {
         function getRandom() {
           return Math.random()*0.003
         }
-        
-        const USERPOST = this.msg.post(name, coordinates, message);
+        this.msg.post(name, coordinates, message);
         this.router.navigateByUrl("/news");
       }
     )
