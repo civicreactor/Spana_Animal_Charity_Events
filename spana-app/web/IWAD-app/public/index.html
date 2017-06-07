@@ -14,10 +14,46 @@
     <meta property="n2s:via" content="Google" />
     <meta property="n2s:hashtags" content="Google" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-496095-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <script src="ga_social_tracking.js"></script>
+
+
 <link href="styles.24070099df2983ad8958.bundle.css" rel="stylesheet"/></head>
 
 <body>
-    <div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : null, // ENTER your FB App ID
+        channelUrl : '//www.spana.org/spana-pledge', // Channel File
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+      _ga.trackFacebook(); //Google Analytics tracking
+    };
+    // Load the SDK's source Asynchronously
+    (function(d, debug){
+       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+       ref.parentNode.insertBefore(js, ref);
+     }(document, /*debug*/ false));
+  </script>
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -29,6 +65,6 @@
     <app-root>
         <div class="loader"></div>
     </app-root>
-<script type="text/javascript" src="inline.716ca6d052cd3fde727a.bundle.js"></script><script type="text/javascript" src="scripts.d32037491a3329b0562e.bundle.js"></script><script type="text/javascript" src="vendor.83e50abf437cfde96369.bundle.js"></script><script type="text/javascript" src="main.89cb5bb184baf3e55b48.bundle.js"></script></body>
+<script type="text/javascript" src="inline.1d1b349548aead7cae5b.bundle.js"></script><script type="text/javascript" src="scripts.bb1865fd617b95d07e54.bundle.js"></script><script type="text/javascript" src="vendor.5b1ef6aa9bd3bdbcd0b1.bundle.js"></script><script type="text/javascript" src="main.9a705ed9c6e66e4818a0.bundle.js"></script></body>
 
 </html>
