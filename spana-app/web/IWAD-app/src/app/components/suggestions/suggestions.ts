@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EmailService } from '../../services/email';
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'suggestions',
