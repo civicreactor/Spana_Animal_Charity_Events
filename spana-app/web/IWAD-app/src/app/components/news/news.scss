@@ -18,17 +18,11 @@
 
 .fb-share-button {
   margin-top: 3em;
-  margin-left: 15em;
 }
 
 p {
   font-size: 20px;
   text-align: center;
-}
-
-.face-btn {
-  width: 150px;
-  height: 80px;
 }
 
 .button {
@@ -62,6 +56,6 @@ p {
   padding-bottom: 5px;
 }
 
-.button-container {
-  text-align: center;
+.fb-share-button, .message, .img-responsive  {
+  display: inline;
 }
