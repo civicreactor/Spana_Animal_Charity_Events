@@ -29,7 +29,7 @@ p {
 }
 
 h2 {
-  color: #C00A44;
+  color: white;
 }
 
 label {
@@ -41,4 +41,14 @@ label {
   color: #4C3E27;
 }
 
+.banner {
+  background-color: #c00a44;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: calc(80% - 3em);
+  background-size: cover !important;
+  align-items: center;
+  padding-bottom: 10px;
+}
 

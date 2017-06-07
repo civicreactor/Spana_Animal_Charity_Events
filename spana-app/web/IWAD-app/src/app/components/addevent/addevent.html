@@ -1,46 +1,55 @@
-<div class="container">
-    <div class="text-center">
-        <h2>Help working animals by showing your support!</h2>
-        <button class="btn btn-primary btn-lg" (click)="login()">Facebook Login</button>
-        <button *ngIf="loggedIn" class="btn btn-primary btn-lg" (click)="logout()">Logout</button>
-    </div>
+<div class="banner">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <form *ngIf="loggedIn">
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Name/Organisation/Group</label>
-                        <input type="text" [(ngModel)]="name" class="form-control" name="name" placeholder="Name/Organisation/Group" id="name" required data-validation-required-message="Please enter a message.">
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Postcode or nearest town</label>
-                        <input type="postcode" [(ngModel)]="postcode" class="form-control" name="_replyto" placeholder="postcode or nearest town" id="location" required data-validation-required-message="Please enter a message.">
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Message</label>
-                        <textarea class="form-size" name="message" [(ngModel)]="message" class="form-control" placeholder="Your message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="form-group col-xs-12">
-                        <button id="button" (click)="fbPostData(name, postcode, message)" class="btn btn-primary btn-lg">Post</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+        <h2>Help working animals by showing your support!</h2>
     </div>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-12 col-sm-12">
-                <img class="small-img" src="../assets/imgs/DSC05936.jpg">
-                <img class="small-img" src="../assets/imgs/DSC05052.jpg">
-                <img class="small-img" src="../assets/imgs/DSC05362.jpg">
+</div>
+
+<div class="text-center" style="padding-top: 20px">
+    <button *ngIf="!loggedIn" class="btn btn-primary btn-lg" (click)="login()">Facebook Login</button>
+    <button *ngIf="loggedIn" class="btn btn-primary btn-lg" (click)="logout()">Logout</button>
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <form *ngIf="loggedIn">
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Name/Organisation/Group</label>
+                    <input type="text" [(ngModel)]="name" class="form-control" name="name" placeholder="Name/Organisation/Group" id="name" required
+                        data-validation-required-message="Please enter a message.">
+                </div>
             </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Postcode or nearest town</label>
+                    <input type="postcode" [(ngModel)]="postcode" class="form-control" name="_replyto" placeholder="postcode or nearest town"
+                        id="location" required data-validation-required-message="Please enter a message.">
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Message</label>
+                    <textarea class="form-size" name="message" [(ngModel)]="message" class="form-control" placeholder="Your message" id="message"
+                        required data-validation-required-message="Please enter a message."></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <button id="button" (click)="fbPostData(name, postcode, message)" class="btn btn-primary btn-lg">Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+            <img class="small-img" src="../assets/imgs/DSC05936.jpg">
+            <img class="small-img" src="../assets/imgs/DSC05052.jpg">
+            <img class="small-img" src="../assets/imgs/DSC05362.jpg">
         </div>
     </div>
 </div>
