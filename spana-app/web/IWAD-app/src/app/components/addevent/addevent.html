@@ -2,7 +2,7 @@
     <div class="text-center">
         <h2>Help working animals by showing your support!</h2>
         <button class="btn btn-primary btn-lg" (click)="login()">Facebook Login</button>
-        <button class="btn btn-primary btn-lg" (click)="logout()">Logout</button>
+        <button *ngIf="loggedIn" class="btn btn-primary btn-lg" (click)="logout()">Logout</button>
     </div>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
