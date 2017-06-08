@@ -47,6 +47,7 @@ p {
   background-size: cover !important;
   background-color:#E0E0E0;
   margin-top: 30px;
+  margin-bottom: 20px;
   border-radius: 5px;
   color: #4C3E27;
   position: relative;
@@ -72,5 +73,6 @@ p {
   .img2 {
     z-index: -2;
     background-size: cover !important;
+    opacity: 0.1;
   }
 
