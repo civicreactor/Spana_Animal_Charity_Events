@@ -52,3 +52,18 @@ label {
   padding-bottom: 10px;
 }
 
+.img-feet {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  right: 10px;
+}
+  .img1 {
+    z-index: 2;
+  }
+  .img2 {
+    z-index: -2;
+    background-size: cover !important;
+    opacity: 0.5;
+  }
+
