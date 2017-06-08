@@ -29,7 +29,8 @@
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
         "./assets/libs/leaflet/leaflet.js",
-        "./assets/libs/leaflet.markercluster.js"
+        "./assets/libs/leaflet.markercluster.js",
+        "../node_modules/angular2-cookie-law/index.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

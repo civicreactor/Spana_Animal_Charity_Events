@@ -21,6 +21,7 @@ import { CarehomesService } from '../../services/carehomes';
 import { EmailService } from '../../services/email';
 import { UserService } from '../../services/users';
 import { MessageService } from "../../services/message";
+import { CookieLawModule } from "angular2-cookie-law";
 
   // Initialize Firebase
   export const firebaseConfig =  {
@@ -67,6 +68,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    CookieLawModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),

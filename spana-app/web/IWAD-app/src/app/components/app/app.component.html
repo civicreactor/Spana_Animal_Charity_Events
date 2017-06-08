@@ -1,3 +1,19 @@
+<div class="container">
+    <button type="button"
+            *ngIf="!cookieLawSeen"
+            (click)="dismiss()">Dismiss Modal</button>
+
+    <h3 *ngIf="cookieLawSeen">Cookie law dismissed</h3>
+</div>
+
+<cookie-law position="top" name="ng2topCookieLaw">
+    This site uses cookies: 
+    <a href="https://spana.org/cookie-policy"  target="_blank">Find out more.</a>
+</cookie-law>
+
+<cookie-law #cookieLaw  (isSeen)="cookieLawSeen = $event" learnMore="/false" target="_blank">
+</cookie-law>
+
 <nav class="navbar-reactor">
     <div class="container">
         <div class="row">
