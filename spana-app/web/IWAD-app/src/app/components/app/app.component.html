@@ -1,25 +1,11 @@
-<div class="container">
-    <button type="button"
-            *ngIf="!cookieLawSeen"
-            (click)="dismiss()">Dismiss Modal</button>
-
-    <h3 *ngIf="cookieLawSeen">Cookie law dismissed</h3>
-</div>
-
-<cookie-law position="top" name="ng2topCookieLaw">
-    This site uses cookies: 
-    <a href="https://spana.org/cookie-policy"  target="_blank">Find out more.</a>
-</cookie-law>
-
-<cookie-law #cookieLaw  (isSeen)="cookieLawSeen = $event" learnMore="/false" target="_blank">
-</cookie-law>
-
+<cookie-law #cookieLaw position="top" name="IWADCookieLaw" expiration="30" (isSeen)="cookieLawSeen = $event" 
+            learnMore="https://spana.org/cookie-policy" target="_blank"></cookie-law>
 <nav class="navbar-reactor">
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-md-6">
                 <!-- Logo -->
-                <a href="https://spana.org/iwad2017" target="_blank" class="navbar-reactor-brand">
+                <a href="https://spana.org/iwad" target="_blank" class="navbar-reactor-brand">
                     <img class="logo" id="logo" src="assets/imgs/spana-logo-rev.png">
                 </a>
             </div>
@@ -63,7 +49,7 @@
 <section class="sample-app-content">
     <router-outlet></router-outlet>
     <br>
-    <img class="img-responsive" src="../assets/imgs/hooves.png" alt="">
+    <img class="img-responsive img-foot" src="../assets/imgs/hooves.png" alt="">
     <img class="strip" src="../assets/imgs/footer-border.png" alt="stripe bar">
     <footer class="text-center">
         <div class="footer-above">
@@ -81,6 +67,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         Copyright &copy; Civic Reactor
+                        <a href="http://www.civic.spanarchian.co.uk" target="_blank"><img class="civic-logo"src="../assets/imgs/CivicReactorLogo.png" alt=""></a> 
                     </div>
                 </div>
             </div>
