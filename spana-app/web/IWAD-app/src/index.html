@@ -2,71 +2,74 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Spana international working animal day app</title>
-    <base href="/">
+  <meta charset="utf-8">
+  <title>Spana international working animal day app</title>
+  <base href="/">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="www.google.com" />
-    <meta property="og:title" content="google" />
-    <meta property="og:description" content="A site to make researches" />
-    <meta property="og:image" content="google.png" />
-    <meta property="n2s:via" content="Google" />
-    <meta property="n2s:hashtags" content="Google" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="www.google.com" />
+  <meta property="og:title" content="google" />
+  <meta property="og:description" content="A site to make researches" />
+  <meta property="og:image" content="google.png" />
+  <meta property="n2s:via" content="Google" />
+  <meta property="n2s:hashtags" content="Google" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <script type="text/javascript">
+  <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-496095-1']);
     _gaq.push(['_trackPageview']);
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
 
   <script src="ga_social_tracking.js"></script>
 
   <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        appId      : null, // ENTER your FB App ID
-        channelUrl : '//www.spana.org/spana-pledge', // Channel File
-        status     : true, // check login status
-        cookie     : true, // enable cookies to allow the server to access the session
-        xfbml      : true  // parse XFBML
+        appId: null, // ENTER your FB App ID
+        channelUrl: '//www.spana.org/spana-pledge', // Channel File
+        status: true, // check login status
+        cookie: true, // enable cookies to allow the server to access the session
+        xfbml: true  // parse XFBML
       });
       _ga.trackFacebook(); //Google Analytics tracking
     };
     // Load the SDK's source Asynchronously
-    (function(d, debug){
-       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement('script'); js.id = id; js.async = true;
-       js.src = "//connect.facebook.net/en_GB/all" + (debug ? "/debug" : "") + ".js";
-       ref.parentNode.insertBefore(js, ref);
-     }(document, /*debug*/ false));
+    (function (d, debug) {
+      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement('script'); js.id = id; js.async = true;
+      js.src = "//connect.facebook.net/en_GB/all" + (debug ? "/debug" : "") + ".js";
+      ref.parentNode.insertBefore(js, ref);
+    }(document, /*debug*/ false));
   </script>
 
 
 </head>
 
 <body>
-<div id="fb-root"></div>
 
 
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=432878787074328";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-    <app-root>
-        <div class="loader"></div>
-    </app-root>
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=432878787074328";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <app-root>
+    <div class="loader"></div>
+  </app-root>
 </body>
 
 </html>
