@@ -13,7 +13,7 @@
 }
 .sample-app-content p,
 .sample-app-content nav {
-  padding: 30px;
+  padding: 10px;
 }
 .sample-app-content li,
 .sample-app-content p {
@@ -34,8 +34,8 @@
 }
 
 .logo {
-  width: 250px;
-  height: 60px;
+  width: 100%;
+  height: 65px;
 }
 
 .strip {
@@ -43,9 +43,9 @@
   width: 100%;
 }
 
-.logo:hover {
-  transform: scale(1.17);
-}
+// .logo:hover {
+//   transform: scale(1.17);
+// }
 .footer-above {
   color: white;
 }
