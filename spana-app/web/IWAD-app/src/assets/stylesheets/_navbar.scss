@@ -37,8 +37,9 @@
 /* Navbar logo */
 
 .navbar-reactor-brand img {
-    width: 80px;
-    padding-top: 20px;
+    width: 125px;
+    height: 60px;
+    padding-top: 5px;
 }
 
 
@@ -57,7 +58,7 @@
 .navbar-reactor-item {
     flex: 0 1 auto;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .dropdown-toggle btn-success btn-lg {
