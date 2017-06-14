@@ -48,10 +48,6 @@ const appRoutes: Routes = [
   },
   { 
     path: '', component: HomeCmp},
-  {
-    path: 'add-event',
-    component: AddEventCmp
-  },
   { path: 'news', component: NewsCmp},
   { path: 'suggestions', component: SuggestionsCmp}
 ]
