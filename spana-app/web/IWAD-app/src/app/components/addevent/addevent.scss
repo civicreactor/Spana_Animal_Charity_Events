@@ -1,44 +1,93 @@
-@import "./src/assets/stylesheets/_index.scss";
+.note {
+  color: #a8a8a8;
+}
 
-.nudge {
-  margin: 10px 16px 25px 35px;
-  padding: 10px 0px;
+.logo {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  // text-align: center;
+  margin: 40px auto;
+  color: #c00a44;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
 }
 
 p {
-  text-align: left;
-  display: clear;
-}
-
-.text-center{
   text-align: center;
+  font-size: 14px;
+  bottom: 10px;
+  left: 10px;
+  padding-bottom: 30px;
 }
 
-.card img {
-  width: 80%;
+img {
+  margin-bottom: 20px;
+  width: 92%;
+  float: right;
 }
 
-.small-img {
-  width: 300px;
-  height: 350px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+h3 {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+
+.donate {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.button {
+  background: #c00a44;
+  font-weight: 800;
+  font-size: 24px;;
+  border: 1px solid transparent;
+  padding: 0.85em 1em;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.donkey {
+  text-align: center;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-radius: 6px;
   text-decoration: none;
   box-shadow: 2px 2px 3px black;
 }
 
-h2 {
-  color: white;
+@media only screen and (max-width: 350px) {
+    .button {
+      font-size: 0.8em;
+    }
 }
 
-label {
-  color: #4C3E27;
+@media only screen and (max-width: 500px) {
+    .logo {
+      width: 280px;
+    }
 }
 
-#button {
-  background-color: #CAD028;
-  color: #4C3E27;
+@media only screen and (min-width: 992px) {
+    .donkey {
+      width: 450px;
+      height: 350px;
+    }
 }
 
 .banner {
@@ -49,21 +98,23 @@ label {
   height: calc(80% - 3em);
   background-size: cover !important;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
-.img-feet {
-  position: absolute;
-  top: 1px;
-  left: 10px;
-  right: 10px;
+.card {
+  height: calc(80% - 3em);
+  position: relative;
+  background-size: cover !important;
+  background-color:#CAD028;
+  margin-top: 30px;
+  color: #4C3E27;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
-  .img1 {
-    z-index: 2;
-  }
-  .img2 {
-    z-index: -2;
-    background-size: cover !important;
-    opacity: 0.1;
-  }
 
+#p-bold {
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 30px;
+}
