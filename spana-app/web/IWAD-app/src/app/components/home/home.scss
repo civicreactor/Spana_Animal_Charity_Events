@@ -119,3 +119,8 @@ h3 {
   padding-top: 30px;
 }
 
+.banner-img {
+  height: calc(80% - 3em);
+  position: relative;
+  background-size: cover !important;
+}
