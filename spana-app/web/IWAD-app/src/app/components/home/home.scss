@@ -34,7 +34,6 @@ p {
 img {
   margin-bottom: 20px;
   width: 92%;
-  float: right;
 }
 
 h3 {
@@ -121,12 +120,9 @@ h3 {
 
 .banner-img {
   position: relative;
-  // background-size: cover !important;
-
-  width: 100%;
+  background-size: cover !important;
   text-align: center;
   color: white;
   height: calc(80% - 3em);
   align-items: center;
-  padding-bottom: 20px;
 }
