@@ -1,0 +1,155 @@
+/*.navbar-default {
+  background-color: $green;
+}
+
+.navbar-default .navbar-nav li a {
+  color: $white;
+  font-family: $base-font;
+}
+*/
+
+
+/* Main class */
+
+.navbar-reactor {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+    background: white;
+    transition: all 0.3s ease;
+    display: block;
+    height: 70px;
+    margin: 0px 0px 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Optional class to fix the navbar on top */
+
+.navbar-reactor-fixed {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+
+/* Navbar logo */
+
+.navbar-reactor-brand img {
+    width: 125px;
+    height: 60px;
+    padding-top: 5px;
+}
+
+
+/* Navbar right section (with form, links, button) */
+
+.navbar-reactor-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 22px;
+}
+
+
+/* Navbar item */
+
+.navbar-reactor-item {
+    flex: 0 1 auto;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.dropdown-toggle btn-success btn-lg {
+    margin: 0 100px;
+}
+
+
+/* Navbar standard link */
+
+.navbar-reactor-link {
+    color: #666666;
+    font-weight: 200;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar-reactor-link:hover,
+a.active {
+    color: #C00A44;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Navbar right button */
+
+.navbar-reactor-button {
+    margin-left: 10px;
+    padding: 0 20px;
+    border-radius: 20em;
+    line-height: 40px;
+    background-color: #C00A44;
+    color: white;
+    font-size: 14px;
+    border: 2px solid #C00A44;
+}
+
+.navbar-reactor-button:hover {
+    color: white;
+    background: #C00A44;
+    border-color: #ac2626;
+}
+
+
+/* Navbar dropdown menu */
+
+.navbar-reactor-dropdown-menu {
+    margin-top: 15px;
+    box-shadow: 1px 1px 4px $white;
+    border-color: $white;
+    background-color: #CAD028;
+}
+
+.navbar-reactor-dropdown-menu li>a {
+    transition: color 0.3s ease;
+    font-weight: 400px !important;
+    color: $black;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    padding: 10px 20px;
+}
+
+.navbar-reactor-dropdown-menu li>a:hover,
+.dropdown-menu>.active>a {
+    background: transparent !important;
+    color: #C00A44 !important;
+}
+
+.navbar-reactor-dropdown-menu:before {
+    content: ' ';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: -6px;
+    background-color: $white;
+    transform: rotate(45deg);
+    border-left: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+}
+
+.dropdown-toggle.btn-success {
+    color: $black;
+    background-color: #CAD028;
+    border-color: #CAD028;
+    float: right;
+    margin-top: 21px;
+}
+
+.dropdown-toggle.btn-success:hover {
+    color: $black;
+    background-color: #C00A44;
+    border-color: #C00A44;
+}

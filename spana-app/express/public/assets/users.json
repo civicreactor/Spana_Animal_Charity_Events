@@ -1,0 +1,17 @@
+[
+    {
+        "message" : "Show your care on this day - Bob.",
+        "name" : "Bob",
+        "postcode" : "E114EU" 
+    },
+    {
+        "message" : "Show your care on this day - Monica.",
+        "name" : "Monica",
+        "postcode" : "EH75JU"
+    },
+    {
+        "message" : "Show your care on this day - Michael.",
+        "name" : "Michael",
+        "postcode" : "DE742EE"
+    }
+]
