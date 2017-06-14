@@ -8,7 +8,7 @@
                 <p id="p-bold">To help celebrate International Working Animal Day, please leave our teams a message of support and spread
                     the word about <a href="https://spana.org" target="_blank">SPANA’s</a> work helping working animals and
                     the communities that rely on them.</p>
-                <p> If, like us, you believe that every working animal deserves to be treated with compassion, please <a href="add-event">leave us a short
+                <p> If, like us, you believe that every working animal deserves to be treated with compassion, please <a href="#message">leave us a short
                 message</a> and help to populate the <a href="#mapid">map</a> with kindness.<br><br> You can tell us why
                     you <a href="suggestions">support</a> our work, leave our teams some words of encouragement, or just
                     let us know if you’re also passionate about working animal welfare.
@@ -21,7 +21,7 @@
 </div>
 
 <div class="text-center" style="padding-top: 20px">
-    <button *ngIf="!loggedIn" class="nudge button red donate" (click)="login()">Leave a Message of Support</button>
+    <button *ngIf="!loggedIn" id="message" class="nudge button red donate" (click)="login()">Leave a Message of Support</button>
     <button *ngIf="loggedIn" class="nudge button red donate" (click)="logout()">Logout</button>
 </div>
 
@@ -60,10 +60,11 @@
         </form>
     </div>
 </div>
-<div class="container">
+
+<div class="container"> 
+<div class="banner-img img-responsive">
     <div class="row">
-            <div class="col-xs-12">
-                <img class="banner-img" src="https://spana.org/wp-content/uploads/2017/06/App-footer-image.png" alt="laying donkey">
+                <img src="https://spana.org/wp-content/uploads/2017/06/App-footer-image-1.png" alt="laying donkey">
             </div>
         </div>
     </div>
